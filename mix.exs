@@ -22,9 +22,9 @@ defmodule MiniServer.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:poison, "~> 3.0"},
-      {:plug, "~> 1.6"},
-      {:cowboy, "~> 2.4"}
+      {:poison, "~> 3.1"},
+      {:plug, "~> 1.8"},
+      {:plug_cowboy, "~> 2.0"}
     ]
   end
 end

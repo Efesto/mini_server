@@ -1,6 +1,7 @@
 defmodule MiniServer.Endpoint do
   use Plug.Router
 
+  plug(Plug.Logger)
   plug(:match)
   plug(:dispatch)
 
@@ -24,6 +25,6 @@ defmodule MiniServer.Endpoint do
   end
 
   def start_link(_opts) do
-    Plug.Adapters.Cowboy2.http(__MODULE__, [])
+    Plug.Cowboy.http(__MODULE__, [], port: Application.fetch_env!(:mini_server, :port))
   end
 end

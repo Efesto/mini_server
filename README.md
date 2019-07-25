@@ -2,3 +2,5 @@
 
 Minimal JSON endpoint
 
+`make run`
+
